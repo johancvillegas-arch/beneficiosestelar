@@ -141,6 +141,11 @@ section{padding:clamp(4rem,9vw,7.5rem) var(--marco)}
   overflow:hidden;
 }
 .hotel__media img{width:100%;height:100%;object-fit:cover}
+.hotel__mapa{
+  aspect-ratio:4/3;border:1px solid var(--gris-estelar);border-radius:14px;
+  overflow:hidden;margin:1.5rem 0 1.75rem;
+}
+.hotel__mapa iframe{width:100%;height:100%;display:block;border:0}
 .hotel__ubic{font-size:.9rem;font-weight:500;color:var(--horizonte);margin:0 0 .5rem}
 .hotel__lista{list-style:none;padding:0;margin:0 0 1.75rem;font-size:.97rem}
 .hotel__lista li{padding:.55rem 0;border-bottom:1px solid var(--gris-estelar)}
