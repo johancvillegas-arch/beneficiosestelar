@@ -1,0 +1,34 @@
+CARPETA DE IMÁGENES — Beneficios Estelar
+
+Sube aquí las fotos con EXACTAMENTE estos nombres.
+Formato recomendado: WebP al 80-85% de calidad.
+
+HERO
+  hero-beneficios.webp        1920 x 1080   Vista desde Piso 21 o fachada Miraflores
+
+HOTELES
+  miraflores-fachada.webp     1200 x 900    Fachada o lobby de Miraflores
+  bellavista-fachada.webp     1200 x 900    Fachada o interior de apartamento
+
+PLANES (Miraflores)
+  plan-miraflores-01.webp     1000 x 625
+  plan-miraflores-02.webp     1000 x 625
+  plan-miraflores-03.webp     1000 x 625
+
+PLANES (Bellavista)
+  plan-bellavista-01.webp     1000 x 625
+  plan-bellavista-02.webp     1000 x 625
+
+PISO 21 (vertical)
+  piso21-vista.webp           900 x 1200    La vista al Pacífico
+  piso21-plato.webp           900 x 1200    Plato de la carta
+  piso21-salon.webp           900 x 1200    Salón o mesa montada
+  piso21-barra.webp           900 x 1200    Barra o coctelería
+
+OTROS
+  og-beneficios.jpg           1200 x 630    Imagen para compartir por WhatsApp/correo
+  favicon.png                 512 x 512     Ícono del sitio
+
+Después de subir cada foto, ve al index.html, busca el nombre
+del archivo y reemplaza el texto por la etiqueta <img> que está
+comentada justo arriba.

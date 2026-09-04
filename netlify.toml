@@ -1,0 +1,19 @@
+# Configuración de despliegue en Netlify
+# El sitio es estático: no hay proceso de compilación.
+
+[build]
+  publish = "."
+
+# Cabeceras de seguridad básicas
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Caché largo para imágenes y estilos
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"

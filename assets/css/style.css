@@ -1,0 +1,245 @@
+/* =========================================================
+   BENEFICIOS ESTELAR — hoja de estilos única
+   Hoteles Estelar Perú
+   ---------------------------------------------------------
+   PARA CAMBIAR COLORES: edita solo el bloque :root de abajo.
+   Todo el resto del archivo usa var(--nombre), así que el
+   cambio se aplica en toda la página automáticamente.
+   ========================================================= */
+
+:root{
+  /* --- Colores institucionales --- */
+  --azul-estelar:#003062;      /* azul corporativo: CTA y fondos fuertes */
+  --noche-mar:#0b1b2e;         /* azul profundo: hero, nav y footer */
+  --horizonte:#c68a3d;         /* dorado: color de firma */
+  --horizonte-suave:#e3b873;   /* dorado claro: hover y cifras */
+  --niebla:#f1eee7;            /* fondo claro alternativo */
+  --papel:#faf8f4;             /* fondo base */
+  --grafito:#26241f;           /* texto */
+  --gris-estelar:#dadada;      /* bordes y separadores */
+
+  /* --- Tipografía --- */
+  /* Google Sans Flex es variable: una sola familia cubre
+     títulos y cuerpo usando los ejes wght (peso) y wdth (ancho). */
+  --font:"Google Sans Flex","Google Sans",system-ui,-apple-system,sans-serif;
+
+  /* --- Medidas --- */
+  --medida:66ch;                          /* ancho máximo de párrafo */
+  --marco:clamp(1.25rem,5vw,4.5rem);      /* margen lateral de la página */
+}
+
+/* ========== BASE ========== */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation:none!important;transition:none!important}
+}
+body{
+  margin:0;background:var(--papel);color:var(--grafito);
+  font-family:var(--font);font-weight:350;font-size:1.0625rem;line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--horizonte);outline-offset:3px}
+
+h1,h2,h3,h4{
+  font-family:var(--font);font-weight:600;line-height:1.05;margin:0;
+  font-variation-settings:"wdth" 92;
+  letter-spacing:-.025em;
+}
+h1{font-size:clamp(2.6rem,6.5vw,4.75rem)}
+h2{font-size:clamp(1.9rem,4vw,3rem)}
+h3{font-size:clamp(1.35rem,2.2vw,1.75rem)}
+p{margin:0 0 1.1em;max-width:var(--medida)}
+
+/* ========== LÍNEA DE HORIZONTE (motivo de marca) ========== */
+.horizonte{
+  height:1px;border:0;margin:0;
+  background:linear-gradient(90deg,transparent,var(--horizonte) 18%,var(--horizonte) 82%,transparent);
+  opacity:.7;
+}
+
+/* ========== NAVEGACIÓN ========== */
+.nav{
+  position:sticky;top:0;z-index:50;
+  display:flex;align-items:center;gap:1.75rem;
+  padding:.85rem var(--marco);
+  background:rgba(11,27,46,.94);backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(198,138,61,.35);
+  color:#fff;font-size:.9rem;
+}
+.nav__marca{font-weight:600;font-size:1.05rem;letter-spacing:-.02em;margin-right:auto;text-decoration:none}
+.nav__marca span{color:var(--horizonte-suave)}
+.nav__links{display:flex;gap:1.75rem}
+.nav a:not(.nav__marca){
+  text-decoration:none;opacity:.8;padding-block:.25rem;
+  border-bottom:1px solid transparent;font-weight:400;
+}
+.nav a:not(.nav__marca):hover{opacity:1;border-bottom-color:var(--horizonte)}
+@media(max-width:820px){.nav__links{display:none}}
+
+/* ========== BOTONES ========== */
+.wa{
+  display:inline-flex;align-items:center;gap:.55rem;
+  padding:.8rem 1.55rem;border-radius:100px;text-decoration:none;
+  font-size:.92rem;font-weight:500;letter-spacing:-.01em;
+  background:var(--azul-estelar);color:#fff;border:1px solid var(--azul-estelar);
+  transition:background .2s ease,color .2s ease,border-color .2s ease;
+}
+.wa:hover{background:var(--horizonte);border-color:var(--horizonte)}
+.wa--oro{background:var(--horizonte);border-color:var(--horizonte);color:var(--noche-mar)}
+.wa--oro:hover{background:transparent;color:var(--horizonte-suave)}
+.wa--linea{background:transparent;color:var(--azul-estelar);border-color:var(--gris-estelar)}
+.wa--linea:hover{background:var(--azul-estelar);color:#fff;border-color:var(--azul-estelar)}
+.wa--claro{background:transparent;border-color:rgba(255,255,255,.45);color:#fff}
+.wa--claro:hover{background:#fff;color:var(--noche-mar);border-color:#fff}
+.wa svg{width:1.05em;height:1.05em;fill:currentColor;flex:none}
+
+/* ========== SECCIONES ========== */
+section{padding:clamp(4rem,9vw,7.5rem) var(--marco)}
+.seccion__intro{max-width:var(--medida)}
+.seccion__kicker{
+  font-size:.92rem;font-weight:500;color:var(--horizonte);
+  margin:0 0 .6rem;letter-spacing:-.005em;
+}
+
+/* ========== HERO ========== */
+.hero{
+  position:relative;min-height:78vh;
+  display:flex;flex-direction:column;justify-content:center;
+  background:
+    linear-gradient(180deg,rgba(11,27,46,.72),rgba(11,27,46,.5) 45%,rgba(11,27,46,.85)),
+    var(--noche-mar) center/cover no-repeat;
+  color:#fff;padding:clamp(5rem,12vw,9rem) var(--marco);
+}
+/* Cuando exista la foto, descomenta esta regla y ajusta el nombre: */
+/* .hero{background-image:
+     linear-gradient(180deg,rgba(11,27,46,.72),rgba(11,27,46,.5) 45%,rgba(11,27,46,.85)),
+     url("../img/hero-beneficios.webp");} */
+.hero h1{max-width:15ch;font-variation-settings:"wdth" 88;font-weight:700}
+.hero__sub{max-width:44ch;font-size:1.1rem;color:rgba(255,255,255,.85);margin-top:1.5rem}
+.hero__acciones{display:flex;flex-wrap:wrap;gap:.85rem;margin-top:2.25rem}
+.hero .horizonte{margin:1.75rem 0;max-width:22rem}
+.hero .seccion__kicker{color:var(--horizonte-suave)}
+
+/* ========== BLOQUES DE HOTEL ========== */
+.hotel{display:grid;gap:clamp(1.75rem,4vw,3.5rem);align-items:center;grid-template-columns:1fr}
+@media(min-width:900px){
+  .hotel{grid-template-columns:1.05fr 1fr}
+  .hotel--invertido .hotel__media{order:2}
+}
+.hotel + .hotel{margin-top:clamp(3.5rem,7vw,6rem)}
+.hotel__media{
+  aspect-ratio:4/3;background:var(--niebla);border:1px solid var(--gris-estelar);
+  display:grid;place-items:center;color:#9a9384;font-size:.8rem;
+  overflow:hidden;
+}
+.hotel__media img{width:100%;height:100%;object-fit:cover}
+.hotel__ubic{font-size:.9rem;font-weight:500;color:var(--horizonte);margin:0 0 .5rem}
+.hotel__lista{list-style:none;padding:0;margin:0 0 1.75rem;font-size:.97rem}
+.hotel__lista li{padding:.55rem 0;border-bottom:1px solid var(--gris-estelar)}
+.hotel__lista li::before{content:"—";color:var(--horizonte);margin-right:.7rem}
+
+/* ========== ALOJAMIENTO / TARIFAS ========== */
+.alojamiento{background:var(--noche-mar);color:#fff}
+.alojamiento .seccion__kicker{color:var(--horizonte-suave)}
+.tarifas{display:grid;gap:1.5rem;grid-template-columns:1fr;margin-top:3rem}
+@media(min-width:760px){.tarifas{grid-template-columns:1fr 1fr}}
+.tarifa{
+  border:1px solid rgba(198,138,61,.45);border-radius:14px;
+  padding:clamp(1.75rem,3.5vw,2.75rem);display:flex;flex-direction:column;
+}
+.tarifa h3{color:#fff;margin-bottom:.7rem}
+.tarifa p{color:rgba(255,255,255,.78);font-size:.97rem}
+.tarifa__precio{
+  font-size:2.9rem;font-weight:700;font-variation-settings:"wdth" 85;
+  color:var(--horizonte-suave);line-height:1;margin:1.25rem 0 .3rem;letter-spacing:-.03em;
+}
+.tarifa__nota{font-size:.85rem;color:rgba(255,255,255,.55);margin-bottom:1.75rem}
+.tarifa .wa{margin-top:auto;align-self:flex-start}
+
+/* ========== PLANES ========== */
+.planes{background:var(--niebla)}
+.planes__grupo{margin-top:3.25rem}
+.planes__grupo h3{
+  display:flex;align-items:center;gap:1.25rem;
+  color:var(--azul-estelar);margin-bottom:1.75rem;
+}
+.planes__grupo h3::after{content:"";flex:1;height:1px;background:var(--gris-estelar)}
+.grid-planes{display:grid;gap:1.5rem;grid-template-columns:1fr}
+@media(min-width:720px){.grid-planes{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1080px){.grid-planes--tres{grid-template-columns:repeat(3,1fr)}}
+.plan{
+  background:#fff;border:1px solid var(--gris-estelar);border-radius:14px;
+  overflow:hidden;display:flex;flex-direction:column;
+}
+.plan__media{
+  aspect-ratio:16/10;background:var(--papel);
+  border-bottom:1px solid var(--gris-estelar);
+  display:grid;place-items:center;color:#a9a396;font-size:.78rem;overflow:hidden;
+}
+.plan__media img{width:100%;height:100%;object-fit:cover}
+.plan__cuerpo{padding:1.75rem;display:flex;flex-direction:column;flex:1}
+.plan h4{font-size:1.35rem;margin:0 0 .8rem;color:var(--azul-estelar)}
+.plan__incluye{list-style:none;padding:0;margin:0 0 1.5rem;font-size:.94rem;color:#514c42}
+.plan__incluye li{padding-left:1.1rem;position:relative;margin-bottom:.4rem}
+.plan__incluye li::before{
+  content:"·";position:absolute;left:.25rem;
+  color:var(--horizonte);font-size:1.4em;line-height:1;
+}
+.plan__precio{
+  font-size:1.5rem;font-weight:700;color:var(--azul-estelar);
+  letter-spacing:-.02em;margin:0 0 1.25rem;
+}
+.plan .wa{margin-top:auto;align-self:flex-start}
+
+/* ========== PISO 21 ========== */
+.piso21{background:var(--azul-estelar);color:#fff}
+.piso21 .seccion__kicker{color:var(--horizonte-suave)}
+.piso21 p{color:rgba(255,255,255,.82)}
+.piso21__galeria{display:grid;gap:1rem;grid-template-columns:repeat(2,1fr);margin:2.75rem 0}
+@media(min-width:820px){.piso21__galeria{grid-template-columns:repeat(4,1fr)}}
+.piso21__foto{
+  aspect-ratio:3/4;background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.16);border-radius:12px;
+  display:grid;place-items:center;color:rgba(255,255,255,.4);
+  font-size:.74rem;text-align:center;padding:.5rem;overflow:hidden;
+}
+.piso21__foto img{width:100%;height:100%;object-fit:cover}
+.descuento{
+  display:flex;flex-wrap:wrap;align-items:center;gap:clamp(1.25rem,4vw,3rem);
+  border:1px solid rgba(198,138,61,.5);border-radius:14px;
+  padding:clamp(1.75rem,4vw,2.75rem);margin-top:1rem;
+}
+.descuento__cifra{
+  font-size:clamp(3.5rem,9vw,5.5rem);font-weight:700;
+  font-variation-settings:"wdth" 80;
+  line-height:.9;color:var(--horizonte-suave);letter-spacing:-.04em;
+}
+.descuento__texto{flex:1;min-width:16rem}
+.descuento__texto p{margin-bottom:0;font-size:.97rem}
+
+/* ========== FOOTER ========== */
+.pie{
+  background:var(--noche-mar);color:rgba(255,255,255,.6);
+  padding:3.5rem var(--marco);font-size:.88rem;
+}
+.pie a{color:var(--horizonte-suave)}
+.pie__marca{font-size:1.25rem;font-weight:600;color:#fff;margin-bottom:.5rem;letter-spacing:-.02em}
+
+/* ========== MARCADOR DE CONTENIDO PENDIENTE ==========
+   Todo lo que falte completar va con class="todo".
+   Se ve en amarillo con borde punteado para que sea
+   imposible publicarlo por accidente.
+   Al llenar el dato, borra el <span class="todo"> y deja el texto.
+   ==================================================== */
+.todo{
+  background:#fff6d6;border:1px dashed #d4a017;color:#7a5c00;
+  padding:0 .3em;border-radius:3px;
+}
+.alojamiento .todo,.piso21 .todo{
+  background:rgba(255,246,214,.14);
+  border-color:var(--horizonte-suave);color:var(--horizonte-suave);
+}

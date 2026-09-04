@@ -1,0 +1,7 @@
+.DS_Store
+Thumbs.db
+*.psd
+*.ai
+*.indd
+node_modules/
+.netlify/

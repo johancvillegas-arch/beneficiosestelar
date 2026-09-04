@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://REEMPLAZA-CON-TU-DOMINIO.pe/sitemap.xml
