@@ -166,15 +166,45 @@ section{padding:clamp(4rem,9vw,7.5rem) var(--marco)}
 }
 .tarifa h3{color:#fff;margin-bottom:.7rem}
 .tarifa p{color:rgba(255,255,255,.78);font-size:.97rem}
-.tarifa__galeria{display:grid;grid-template-columns:repeat(5,1fr);gap:.5rem;margin:1.5rem 0}
-@media(max-width:480px){.tarifa__galeria{grid-template-columns:repeat(3,1fr)}}
-.tarifa__foto{
-  aspect-ratio:1/1;background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.16);border-radius:8px;
-  display:grid;place-items:center;color:rgba(255,255,255,.4);
-  font-size:.6rem;text-align:center;padding:.3rem;overflow:hidden;
+/* ---------- Carrusel de fotos (dentro de .tarifa) ---------- */
+.carrusel{
+  position:relative;aspect-ratio:4/3;border-radius:12px;overflow:hidden;
+  border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);
+  margin:1.5rem 0;
 }
-.tarifa__foto img{width:100%;height:100%;object-fit:cover}
+.carrusel__pista{
+  display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;
+  scrollbar-width:none;-ms-overflow-style:none;
+}
+.carrusel__pista::-webkit-scrollbar{display:none}
+.carrusel__slide{flex:0 0 100%;height:100%;scroll-snap-align:start}
+.carrusel__slide img{width:100%;height:100%;object-fit:cover}
+.carrusel__slide--vacio{
+  display:grid;place-items:center;color:rgba(255,255,255,.4);
+  font-size:.75rem;text-align:center;padding:1rem;
+}
+.carrusel__control{
+  position:absolute;left:50%;bottom:.75rem;transform:translateX(-50%);
+  display:flex;align-items:center;gap:.5rem;
+  background:rgba(11,27,46,.55);backdrop-filter:blur(6px);
+  border-radius:100px;padding:.35rem .5rem;
+}
+.carrusel__flecha{
+  display:grid;place-items:center;width:1.6rem;height:1.6rem;flex:none;
+  border:0;border-radius:50%;background:transparent;color:#fff;
+  cursor:pointer;padding:0;
+}
+.carrusel__flecha:hover{background:rgba(255,255,255,.18)}
+.carrusel__flecha svg{width:.85rem;height:.85rem}
+.carrusel__puntos{display:flex;align-items:center;gap:.35rem;padding:0 .15rem}
+.carrusel__punto{
+  width:.4rem;height:.4rem;border-radius:50%;border:0;padding:0;flex:none;
+  background:rgba(255,255,255,.45);cursor:pointer;
+  transition:background .2s ease,width .2s ease,height .2s ease;
+}
+.carrusel__punto[aria-current="true"]{background:#fff;width:.5rem;height:.5rem}
+@media(prefers-reduced-motion:reduce){.carrusel__pista{scroll-behavior:auto}}
+
 .tarifa__tipos{list-style:none;padding:0;margin:.5rem 0 0}
 .tarifa__tipos li{
   display:flex;justify-content:space-between;align-items:baseline;gap:1rem;

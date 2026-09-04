@@ -22,7 +22,9 @@ una dependencia, propónlo antes en vez de instalarlo.
 index.html              Página única con anclas (#hoteles, #alojamiento, #planes, #piso21)
 assets/css/style.css    Todo el diseño. Los tokens están en :root al inicio
 assets/js/config.js     WhatsApp, dominio, analítica. Motor de enlaces data-wa
+assets/js/carrusel.js   Motor genérico de carruseles de fotos (data-carrusel)
 assets/img/             Fotos. LEEME.txt tiene los nombres y medidas exactas
+assets/video/           Video del hero
 ```
 
 ## Secciones de la página

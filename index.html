@@ -142,12 +142,29 @@
 
     <article class="tarifa">
       <h3>Hotel Estelar Miraflores</h3>
-      <div class="tarifa__galeria">
-        <div class="tarifa__foto"><img src="assets/img/habitacion-miraflores-01.webp" alt="Habitación Hotel Estelar Miraflores"></div>
-        <div class="tarifa__foto"><img src="assets/img/habitacion-miraflores-02.webp" alt="Habitación Hotel Estelar Miraflores"></div>
-        <div class="tarifa__foto"><img src="assets/img/habitacion-miraflores-03.webp" alt="Habitación Hotel Estelar Miraflores"></div>
-        <div class="tarifa__foto"><img src="assets/img/habitacion-miraflores-04.webp" alt="Habitación Hotel Estelar Miraflores"></div>
-        <div class="tarifa__foto"><img src="assets/img/habitacion-miraflores-05.webp" alt="Habitación Hotel Estelar Miraflores"></div>
+      <div class="carrusel" data-carrusel>
+        <div class="carrusel__pista" data-carrusel-pista>
+          <div class="carrusel__slide"><img src="assets/img/habitacion-miraflores-01.webp" alt="Habitación Hotel Estelar Miraflores"></div>
+          <div class="carrusel__slide"><img src="assets/img/habitacion-miraflores-02.webp" alt="Habitación Hotel Estelar Miraflores"></div>
+          <div class="carrusel__slide"><img src="assets/img/habitacion-miraflores-03.webp" alt="Habitación Hotel Estelar Miraflores"></div>
+          <div class="carrusel__slide"><img src="assets/img/habitacion-miraflores-04.webp" alt="Habitación Hotel Estelar Miraflores"></div>
+          <div class="carrusel__slide"><img src="assets/img/habitacion-miraflores-05.webp" alt="Habitación Hotel Estelar Miraflores"></div>
+        </div>
+        <div class="carrusel__control">
+          <button class="carrusel__flecha" type="button" data-carrusel-prev aria-label="Foto anterior">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="carrusel__puntos" data-carrusel-puntos>
+            <button class="carrusel__punto" type="button" data-carrusel-punto aria-label="Ir a la foto 1"></button>
+            <button class="carrusel__punto" type="button" data-carrusel-punto aria-label="Ir a la foto 2"></button>
+            <button class="carrusel__punto" type="button" data-carrusel-punto aria-label="Ir a la foto 3"></button>
+            <button class="carrusel__punto" type="button" data-carrusel-punto aria-label="Ir a la foto 4"></button>
+            <button class="carrusel__punto" type="button" data-carrusel-punto aria-label="Ir a la foto 5"></button>
+          </div>
+          <button class="carrusel__flecha" type="button" data-carrusel-next aria-label="Foto siguiente">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
       </div>
       <ul class="tarifa__tipos">
         <li><span>Habitación estándar queen</span><strong>S/ 375</strong></li>
@@ -159,13 +176,31 @@
 
     <article class="tarifa">
       <h3>Estelar Apartamentos Bellavista</h3>
-      <!-- Al subir cada foto: <img src="assets/img/habitacion-bellavista-01.webp" alt=""> (y 02 a 05) -->
-      <div class="tarifa__galeria">
-        <div class="tarifa__foto">habitacion-bellavista-01.webp</div>
-        <div class="tarifa__foto">habitacion-bellavista-02.webp</div>
-        <div class="tarifa__foto">habitacion-bellavista-03.webp</div>
-        <div class="tarifa__foto">habitacion-bellavista-04.webp</div>
-        <div class="tarifa__foto">habitacion-bellavista-05.webp</div>
+      <!-- Al subir cada foto, reemplaza el contenido del <div class="carrusel__slide"> por:
+           <img src="assets/img/habitacion-bellavista-01.webp" alt="Habitación Estelar Apartamentos Bellavista"> (y 02 a 05) -->
+      <div class="carrusel" data-carrusel>
+        <div class="carrusel__pista" data-carrusel-pista>
+          <div class="carrusel__slide carrusel__slide--vacio">habitacion-bellavista-01.webp</div>
+          <div class="carrusel__slide carrusel__slide--vacio">habitacion-bellavista-02.webp</div>
+          <div class="carrusel__slide carrusel__slide--vacio">habitacion-bellavista-03.webp</div>
+          <div class="carrusel__slide carrusel__slide--vacio">habitacion-bellavista-04.webp</div>
+          <div class="carrusel__slide carrusel__slide--vacio">habitacion-bellavista-05.webp</div>
+        </div>
+        <div class="carrusel__control">
+          <button class="carrusel__flecha" type="button" data-carrusel-prev aria-label="Foto anterior">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="carrusel__puntos" data-carrusel-puntos>
+            <button class="carrusel__punto" type="button" data-carrusel-punto aria-label="Ir a la foto 1"></button>
+            <button class="carrusel__punto" type="button" data-carrusel-punto aria-label="Ir a la foto 2"></button>
+            <button class="carrusel__punto" type="button" data-carrusel-punto aria-label="Ir a la foto 3"></button>
+            <button class="carrusel__punto" type="button" data-carrusel-punto aria-label="Ir a la foto 4"></button>
+            <button class="carrusel__punto" type="button" data-carrusel-punto aria-label="Ir a la foto 5"></button>
+          </div>
+          <button class="carrusel__flecha" type="button" data-carrusel-next aria-label="Foto siguiente">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
       </div>
       <ul class="tarifa__tipos">
         <li><span>Junior suite queen</span><strong>S/ 299</strong></li>
@@ -344,5 +379,6 @@
 </footer>
 
 <script src="assets/js/config.js"></script>
+<script src="assets/js/carrusel.js"></script>
 </body>
 </html>
