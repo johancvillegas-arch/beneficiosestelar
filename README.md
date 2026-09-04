@@ -30,7 +30,7 @@ avisa cuántos quedan.
 
 | Qué | Dónde | Cómo |
 |---|---|---|
-| Número de WhatsApp de Karla | `assets/js/config.js` | Línea `whatsapp:` — formato `51987654321`, sin `+` ni espacios |
+| Número de WhatsApp de Luisa | `assets/js/config.js` | Línea `whatsapp:` — formato `51987654321`, sin `+` ni espacios |
 | Tarifas de los 2 hoteles | `index.html` → sección `alojamiento` | Reemplaza `S/ TODO` y el tipo de habitación |
 | Los 5 planes | `index.html` → sección `planes` | Nombre, beneficios y precio de cada uno |
 | Descuento de Piso 21 | `index.html` → sección `piso21` | El porcentaje y los días en que aplica |
@@ -104,21 +104,23 @@ En el HTML, cualquier enlace con el atributo `data-wa` se convierte automáticam
 en un enlace de WhatsApp con el mensaje ya escrito:
 
 ```html
-<a class="wa" data-wa="tarifa en Miraflores" href="#">Reservar</a>
+<a class="wa" data-wa="Hotel Estelar Miraflores" href="#">Reservar</a>
 ```
 
-A Karla le llega: *"Hola, escribo por Beneficios Estelar. Me interesa: tarifa en Miraflores."*
+A Luisa le llega: *"Hola Estelar, deseo reservar en Hotel Estelar Miraflores."*
 
 Así identifica desde qué botón entró cada consulta sin tener que preguntarlo.
 Para agregar un botón nuevo, copia la etiqueta y cambia el texto de `data-wa`.
+Si el texto no queda natural con "deseo reservar en...", se puede escribir el
+mensaje completo a mano con `data-wa-mensaje` (ver el comentario en `config.js`).
 
 ---
 
 ## Antes de publicar
 
-- [ ] Número real de WhatsApp en `config.js`
+- [x] Número real de WhatsApp en `config.js` (Luisa)
 - [ ] Cero elementos en amarillo en la página
 - [ ] Fotos subidas y etiquetas `<img>` activadas
 - [ ] Dominio reemplazado en los 4 archivos
 - [ ] Tarifas validadas con Carlos Monsef (el sitio es público: quedan indexadas en Google)
-- [ ] Karla avisada de que empezarán a llegar consultas por este canal
+- [ ] Luisa avisada de que empezarán a llegar consultas por este canal

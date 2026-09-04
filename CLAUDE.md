@@ -4,7 +4,7 @@
 
 Micrositio **público** del programa de convenios corporativos de Hoteles Estelar Perú.
 Lo usan colaboradores de empresas afiliadas para ver sus beneficios y reservar.
-Toda conversión sale por WhatsApp hacia Karla Rojas (ventas directas).
+Toda conversión sale por WhatsApp hacia Luisa (ventas directas).
 
 No hay validación por empresa: el sitio es abierto y se indexa en Google.
 
@@ -68,13 +68,17 @@ Cualquier `<a>` con atributo `data-wa` se convierte en enlace de WhatsApp con
 mensaje prellenado, vía el motor en `config.js`:
 
 ```html
-<a class="wa" data-wa="tarifa en Miraflores" href="#">Reservar</a>
+<a class="wa" data-wa="Hotel Estelar Miraflores" href="#">Reservar</a>
 ```
 
-Genera: *"Hola, escribo por Beneficios Estelar. Me interesa: tarifa en Miraflores."*
+Genera: *"Hola Estelar, deseo reservar en Hotel Estelar Miraflores."*
 
-Cada botón debe tener un `data-wa` **distinto y específico**, para que Karla
+Cada botón debe tener un `data-wa` **distinto y específico**, para que Luisa
 identifique de qué sección vino la consulta. Nunca uses un texto genérico repetido.
+
+Si el texto no queda natural con la frase "deseo reservar en...", se puede
+escribir el mensaje completo a mano con `data-wa-mensaje` (ver el comentario
+en `config.js`).
 
 ### Estilos
 Todo color y medida sale de una variable CSS. No escribas hex sueltos en el
@@ -88,11 +92,11 @@ Todo el contenido, los comentarios del código y los nombres de clases van en
 ## Estado actual
 
 - Estructura y diseño: completos
-- Contenido: ~30 datos pendientes marcados con `.todo`
-- Número de WhatsApp: placeholder `51999999999` en `config.js`
+- Número de WhatsApp: real, de Luisa, ya cargado en `config.js`
 - Dominio: placeholder `REEMPLAZA-CON-TU-DOMINIO.pe` en 4 archivos
   (`config.js`, `index.html`, `robots.txt`, `sitemap.xml`)
-- Fotos: ninguna subida; los contenedores muestran el nombre de archivo esperado
+- Contenido y fotos: en progreso — quedan pendientes Piso 21 (fotos,
+  días del descuento) y el logo (nav, banner de beneficios, footer)
 
 ## Proyecto hermano
 
@@ -102,7 +106,7 @@ Si cambias un patrón aquí, considera si conviene alinearlo allá.
 
 ## Antes de publicar
 
-- Número real de WhatsApp de Karla
+- ~~Número real de WhatsApp de Luisa~~ (ya cargado)
 - Cero elementos `.todo` en la página
 - Tarifas validadas con Carlos Monsef (país) — el sitio es público e indexable
 - Fotos subidas con las etiquetas `<img>` activadas

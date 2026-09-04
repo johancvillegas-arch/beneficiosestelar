@@ -16,7 +16,7 @@ const CONFIG = {
      Formato internacional, SIN el signo + y SIN espacios.
      Ejemplo para Perú: 51987654321
      ---------------------------------------------------- */
-  whatsapp: "51999999999",          // TODO: número real de Karla Rojas
+  whatsapp: "51962383333",          // Luisa
 
   /* --- Identidad del sitio ---------------------------- */
   dominio: "https://REEMPLAZA-CON-TU-DOMINIO.pe",   // TODO: al comprar el dominio
@@ -44,17 +44,25 @@ const CONFIG = {
    atributo data-wa se convierte en un enlace de WhatsApp
    con el mensaje ya escrito. Ejemplo:
 
-     <a class="wa" data-wa="tarifa en Miraflores">Reservar</a>
+     <a class="wa" data-wa="Hotel Estelar Miraflores">Reservar</a>
 
-   Le llega a Karla:
-     "Hola, escribo por Beneficios Estelar.
-      Me interesa: tarifa en Miraflores."
+   Le llega a Luisa:
+     "Hola Estelar, deseo reservar en Hotel Estelar Miraflores."
 
-   Así sabe desde qué botón entró la consulta.
+   Así sabe desde qué botón entró la consulta. Si el texto no
+   queda natural con "deseo reservar en...", se puede escribir
+   el mensaje completo a mano con data-wa-mensaje, por ejemplo:
+
+     <a data-wa="afiliar mi empresa"
+        data-wa-mensaje="Hola Estelar, quiero afiliar a mi empresa al convenio.">
+       Escríbenos
+     </a>
    ========================================================= */
 
-function waLink(asunto){
-  const texto = `Hola, escribo por Beneficios Estelar. Me interesa: ${asunto}.`;
+function waLink(elemento){
+  const texto = elemento.dataset.waMensaje
+    ? elemento.dataset.waMensaje
+    : `Hola Estelar, deseo reservar en ${elemento.dataset.wa}.`;
   return `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(texto)}`;
 }
 
@@ -62,20 +70,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 1. Activa todos los botones de WhatsApp
   document.querySelectorAll("[data-wa]").forEach(a => {
-    a.href   = waLink(a.dataset.wa);
+    a.href   = waLink(a);
     a.target = "_blank";
     a.rel    = "noopener";
   });
 
-  // 2. Aviso en consola si el número sigue siendo el de relleno
-  if (CONFIG.whatsapp === "51999999999") {
-    console.warn(
-      "[Beneficios Estelar] Falta el número real de WhatsApp. " +
-      "Edítalo en assets/js/config.js antes de publicar."
-    );
-  }
-
-  // 3. Aviso si quedó contenido pendiente sin completar
+  // 2. Aviso si quedó contenido pendiente sin completar
   const pendientes = document.querySelectorAll(".todo").length;
   if (pendientes > 0) {
     console.warn(
