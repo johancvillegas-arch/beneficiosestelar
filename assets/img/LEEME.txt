@@ -34,15 +34,18 @@ GALERÍA DE HABITACIONES (sección Alojamiento, hasta 5 fotos c/u)
   habitacion-bellavista-04.webp   800 x 800
   habitacion-bellavista-05.webp   800 x 800
 
-LOGO (banner de beneficios, sección Alojamiento — fondo azul noche)
-  logo-estelar-blanco.png     ancho ~300px, alto libre, fondo transparente
-                               (versión blanca/clara del logo, para fondo oscuro)
+LOGO — listo
+  logo-estelar.png (798x365, fondo transparente). Se usa en el nav,
+  el banner de beneficios y el footer — los tres sobre fondo azul
+  noche, que es donde funciona (tiene texto e ícono en blanco/dorado).
 
-PISO 21 (vertical)
-  piso21-vista.webp           900 x 1200    La vista al Pacífico
-  piso21-plato.webp           900 x 1200    Plato de la carta
-  piso21-salon.webp           900 x 1200    Salón o mesa montada
-  piso21-barra.webp           900 x 1200    Barra o coctelería
+PISO 21 (vertical) — listo
+  piso21-vista01.webp   900 x 1200   Barra al atardecer
+  piso21-vista02.webp   900 x 1200   Desayuno con vista panorámica
+  piso21-vista03.webp   900 x 1200   Plato de la carta
+  piso21-vista04.webp   900 x 1200   Cena con vista nocturna
+  (Se subieron con estos nombres en vez de vista/plato/salon/barra;
+  el index.html ya las usa así, no hace falta renombrarlas.)
 
 OTROS
   og-beneficios.jpg           1200 x 630    Imagen para compartir por WhatsApp/correo

@@ -95,8 +95,9 @@ Todo el contenido, los comentarios del código y los nombres de clases van en
 - Número de WhatsApp: real, de Luisa, ya cargado en `config.js`
 - Dominio: placeholder `REEMPLAZA-CON-TU-DOMINIO.pe` en 4 archivos
   (`config.js`, `index.html`, `robots.txt`, `sitemap.xml`)
-- Contenido y fotos: en progreso — quedan pendientes Piso 21 (fotos,
-  días del descuento) y el logo (nav, banner de beneficios, footer)
+- Fotos y logo: completos (hoteles, planes, habitaciones, Piso 21, logo)
+- Contenido: queda pendiente los días de la semana del descuento de
+  Piso 21 y validar tarifas/planes con Carlos Monsef
 
 ## Proyecto hermano
 
