@@ -12,8 +12,26 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
-# Caché largo para imágenes y estilos
+# Caché largo para imágenes y video (casi no cambian una vez subidos)
 [[headers]]
-  for = "/assets/*"
+  for = "/assets/img/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/assets/video/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+# CSS y JS: sin caché larga mientras el sitio está en desarrollo activo,
+# para que cada cambio se vea sin que el visitante tenga que forzar refresh.
+# Cuando el sitio esté estable, se puede volver a subir este valor.
+[[headers]]
+  for = "/assets/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/assets/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
