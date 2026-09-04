@@ -16,9 +16,11 @@ PLANES (Miraflores) — listo
   plan-miraflores-02.webp     1000 x 625
   plan-miraflores-03.webp     1000 x 625
 
-PLANES (Bellavista) — listo
+PLANES (Bellavista) — listo (un solo plan)
   plan-bellavista-01.webp     1000 x 625
-  plan-bellavista-02.webp     1000 x 625
+  plan-bellavista-02.webp ya no se usa (Bellavista quedó con un solo plan,
+                               no dos). El archivo se puede dejar o borrar,
+                               no rompe nada si queda sin usar.
 
 GALERÍA DE HABITACIONES (sección Alojamiento, hasta 5 fotos c/u)
   habitacion-miraflores-01.webp   800 x 800
