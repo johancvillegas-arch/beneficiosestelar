@@ -129,7 +129,7 @@ section{padding:clamp(4rem,9vw,7.5rem) var(--marco)}
 .hero .seccion__kicker{color:var(--horizonte-suave)}
 
 /* ========== BLOQUES DE HOTEL ========== */
-.hotel{display:grid;gap:clamp(1.75rem,4vw,3.5rem);align-items:center;grid-template-columns:1fr}
+.hotel{display:grid;gap:clamp(1.75rem,4vw,3.5rem);align-items:start;grid-template-columns:1fr}
 @media(min-width:900px){
   .hotel{grid-template-columns:1.05fr 1fr}
   .hotel--invertido .hotel__media{order:2}
@@ -146,6 +146,10 @@ section{padding:clamp(4rem,9vw,7.5rem) var(--marco)}
   overflow:hidden;margin:1.5rem 0 1.75rem;
 }
 .hotel__mapa iframe{width:100%;height:100%;display:block;border:0}
+.hotel__direccion{
+  font-style:normal;font-size:.92rem;color:#514c42;
+  line-height:1.5;margin:0 0 1.75rem;
+}
 .hotel__ubic{font-size:.9rem;font-weight:500;color:var(--horizonte);margin:0 0 .5rem}
 .hotel__lista{list-style:none;padding:0;margin:0 0 1.75rem;font-size:.97rem}
 .hotel__lista li{padding:.55rem 0;border-bottom:1px solid var(--gris-estelar)}
