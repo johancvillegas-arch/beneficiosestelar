@@ -166,12 +166,42 @@ section{padding:clamp(4rem,9vw,7.5rem) var(--marco)}
 }
 .tarifa h3{color:#fff;margin-bottom:.7rem}
 .tarifa p{color:rgba(255,255,255,.78);font-size:.97rem}
-.tarifa__precio{
-  font-size:2.9rem;font-weight:700;font-variation-settings:"wdth" 85;
-  color:var(--horizonte-suave);line-height:1;margin:1.25rem 0 .3rem;letter-spacing:-.03em;
+.tarifa__galeria{display:grid;grid-template-columns:repeat(5,1fr);gap:.5rem;margin:1.5rem 0}
+@media(max-width:480px){.tarifa__galeria{grid-template-columns:repeat(3,1fr)}}
+.tarifa__foto{
+  aspect-ratio:1/1;background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.16);border-radius:8px;
+  display:grid;place-items:center;color:rgba(255,255,255,.4);
+  font-size:.6rem;text-align:center;padding:.3rem;overflow:hidden;
 }
-.tarifa__nota{font-size:.85rem;color:rgba(255,255,255,.55);margin-bottom:1.75rem}
+.tarifa__foto img{width:100%;height:100%;object-fit:cover}
+.tarifa__tipos{list-style:none;padding:0;margin:.5rem 0 0}
+.tarifa__tipos li{
+  display:flex;justify-content:space-between;align-items:baseline;gap:1rem;
+  padding:.85rem 0;border-bottom:1px solid rgba(198,138,61,.25);
+}
+.tarifa__tipos li:last-child{border-bottom:0}
+.tarifa__tipos span{color:rgba(255,255,255,.85);font-size:.97rem}
+.tarifa__tipos strong{
+  color:var(--horizonte-suave);font-size:1.3rem;font-weight:700;
+  font-variation-settings:"wdth" 88;letter-spacing:-.02em;white-space:nowrap;
+}
+.tarifa__nota{font-size:.85rem;color:rgba(255,255,255,.55);margin:.75rem 0 1.75rem}
 .tarifa .wa{margin-top:auto;align-self:flex-start}
+
+.beneficios{
+  display:flex;flex-wrap:wrap;align-items:center;gap:clamp(1.5rem,4vw,2.75rem);
+  border:1px solid rgba(198,138,61,.5);border-radius:14px;
+  padding:clamp(1.5rem,3.5vw,2.25rem);margin-top:clamp(2.5rem,5vw,4rem);
+}
+.beneficios__logo{
+  flex:none;width:9rem;aspect-ratio:3/1;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);
+  border-radius:10px;display:grid;place-items:center;overflow:hidden;
+  color:rgba(255,255,255,.4);font-size:.68rem;text-align:center;padding:.5rem;
+}
+.beneficios__logo img{width:100%;height:100%;object-fit:contain}
+.beneficios__texto{flex:1;min-width:16rem;margin:0;color:rgba(255,255,255,.85);font-size:.98rem}
 
 /* ========== PLANES ========== */
 .planes{background:var(--niebla)}

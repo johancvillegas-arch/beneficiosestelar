@@ -20,6 +20,22 @@ PLANES (Bellavista) — listo
   plan-bellavista-01.webp     1000 x 625
   plan-bellavista-02.webp     1000 x 625
 
+GALERÍA DE HABITACIONES (sección Alojamiento, hasta 5 fotos c/u)
+  habitacion-miraflores-01.webp   800 x 800
+  habitacion-miraflores-02.webp   800 x 800
+  habitacion-miraflores-03.webp   800 x 800
+  habitacion-miraflores-04.webp   800 x 800
+  habitacion-miraflores-05.webp   800 x 800
+  habitacion-bellavista-01.webp   800 x 800
+  habitacion-bellavista-02.webp   800 x 800
+  habitacion-bellavista-03.webp   800 x 800
+  habitacion-bellavista-04.webp   800 x 800
+  habitacion-bellavista-05.webp   800 x 800
+
+LOGO (banner de beneficios, sección Alojamiento — fondo azul noche)
+  logo-estelar-blanco.png     ancho ~300px, alto libre, fondo transparente
+                               (versión blanca/clara del logo, para fondo oscuro)
+
 PISO 21 (vertical)
   piso21-vista.webp           900 x 1200    La vista al Pacífico
   piso21-plato.webp           900 x 1200    Plato de la carta
