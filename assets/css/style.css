@@ -271,6 +271,16 @@ section{padding:clamp(4rem,9vw,7.5rem) var(--marco)}
   font-size:1.5rem;font-weight:700;color:var(--azul-estelar);
   letter-spacing:-.02em;margin:0 0 1.25rem;
 }
+.plan__precios{display:flex;align-items:baseline;gap:.65rem;margin:0 0 .3rem;flex-wrap:wrap}
+.plan__precio-regular{
+  font-size:1.05rem;color:#a9a396;text-decoration:line-through;
+  text-decoration-color:var(--horizonte);
+}
+.plan__precio-especial{
+  font-size:1.5rem;font-weight:700;color:var(--azul-estelar);
+  letter-spacing:-.02em;
+}
+.plan__nota{font-size:.82rem;color:#8a8477;margin:0 0 1.25rem}
 .plan .wa{margin-top:auto;align-self:flex-start}
 
 /* ========== PISO 21 ========== */
