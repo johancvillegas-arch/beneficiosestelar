@@ -47,20 +47,24 @@
 
 <!-- =========================================================
      HERO
-     Foto de fondo: descomenta la regla .hero en style.css
-     cuando subas assets/img/hero-beneficios.webp
+     Fondo: video assets/video/hero-beneficios.mp4
      ========================================================= -->
 <header class="hero" id="inicio">
-  <p class="seccion__kicker">Convenios corporativos</p>
-  <h1>Tu empresa te abre las puertas de Estelar en Lima</h1>
-  <hr class="horizonte">
-  <p class="hero__sub">Tarifas preferenciales en nuestros dos hoteles, planes de alojamiento y descuento en el Restaurante Piso 21.</p>
-  <div class="hero__acciones">
-    <a class="wa wa--oro" data-wa="tarifa preferencial de alojamiento" href="#">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.6-1.1-4.3-3.8-4.4-4-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2 0 .4-.1.5l-.3.4c-.1.1-.3.3-.1.6.1.3.6 1.1 1.4 1.7 1 .8 1.7 1.1 2 1.2.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.6-.1l1.9.9c.3.1.5.2.5.4.1.1.1.6-.1 1.3Z"/></svg>
-      Consultar por WhatsApp
-    </a>
-    <a class="wa wa--claro" href="#hoteles">Ver los hoteles</a>
+  <video class="hero__video" autoplay muted loop playsinline preload="metadata">
+    <source src="assets/video/hero-beneficios.mp4" type="video/mp4">
+  </video>
+  <div class="hero__contenido">
+    <p class="seccion__kicker">Convenios corporativos</p>
+    <h1>Tu empresa te abre las puertas de Estelar en Lima</h1>
+    <hr class="horizonte">
+    <p class="hero__sub">Tarifas preferenciales en nuestros dos hoteles, planes de alojamiento y descuento en el Restaurante Piso 21.</p>
+    <div class="hero__acciones">
+      <a class="wa wa--oro" data-wa="tarifa preferencial de alojamiento" href="#">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.6-1.1-4.3-3.8-4.4-4-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2 0 .4-.1.5l-.3.4c-.1.1-.3.3-.1.6.1.3.6 1.1 1.4 1.7 1 .8 1.7 1.1 2 1.2.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.6-.1l1.9.9c.3.1.5.2.5.4.1.1.1.6-.1 1.3Z"/></svg>
+        Consultar por WhatsApp
+      </a>
+      <a class="wa wa--claro" href="#hoteles">Ver los hoteles</a>
+    </div>
   </div>
 </header>
 
@@ -79,9 +83,7 @@
     <!-- ---------- MIRAFLORES ---------- -->
     <article class="hotel">
       <div class="hotel__media">
-        <!-- Al subir la foto, reemplaza esta línea por:
-             <img src="assets/img/miraflores-fachada.webp" alt="Hotel Estelar Miraflores"> -->
-        miraflores-fachada.webp
+        <img src="assets/img/miraflores-fachada.webp" alt="Hotel Estelar Miraflores">
       </div>
       <div>
         <p class="hotel__ubic">Miraflores, Lima</p>
@@ -101,8 +103,7 @@
     <!-- ---------- BELLAVISTA ---------- -->
     <article class="hotel hotel--invertido">
       <div class="hotel__media">
-        <!-- <img src="assets/img/bellavista-fachada.webp" alt="Estelar Apartamentos Bellavista"> -->
-        bellavista-fachada.webp
+        <img src="assets/img/bellavista-fachada.webp" alt="Estelar Apartamentos Bellavista">
       </div>
       <div>
         <p class="hotel__ubic">Bellavista, Callao</p>
@@ -178,8 +179,7 @@
 
       <article class="plan">
         <div class="plan__media">
-          <!-- <img src="assets/img/plan-miraflores-01.webp" alt=""> -->
-          plan-miraflores-01.webp
+          <img src="assets/img/plan-miraflores-01.webp" alt="">
         </div>
         <div class="plan__cuerpo">
           <h4><span class="todo">TODO: nombre del plan 1</span></h4>
@@ -196,8 +196,7 @@
 
       <article class="plan">
         <div class="plan__media">
-          <!-- <img src="assets/img/plan-miraflores-02.webp" alt=""> -->
-          plan-miraflores-02.webp
+          <img src="assets/img/plan-miraflores-02.webp" alt="">
         </div>
         <div class="plan__cuerpo">
           <h4><span class="todo">TODO: nombre del plan 2</span></h4>
@@ -214,8 +213,7 @@
 
       <article class="plan">
         <div class="plan__media">
-          <!-- <img src="assets/img/plan-miraflores-03.webp" alt=""> -->
-          plan-miraflores-03.webp
+          <img src="assets/img/plan-miraflores-03.webp" alt="">
         </div>
         <div class="plan__cuerpo">
           <h4><span class="todo">TODO: nombre del plan 3</span></h4>
@@ -240,8 +238,7 @@
 
       <article class="plan">
         <div class="plan__media">
-          <!-- <img src="assets/img/plan-bellavista-01.webp" alt=""> -->
-          plan-bellavista-01.webp
+          <img src="assets/img/plan-bellavista-01.webp" alt="">
         </div>
         <div class="plan__cuerpo">
           <h4><span class="todo">TODO: nombre del plan 1</span></h4>
@@ -257,8 +254,7 @@
 
       <article class="plan">
         <div class="plan__media">
-          <!-- <img src="assets/img/plan-bellavista-02.webp" alt=""> -->
-          plan-bellavista-02.webp
+          <img src="assets/img/plan-bellavista-02.webp" alt="">
         </div>
         <div class="plan__cuerpo">
           <h4><span class="todo">TODO: nombre del plan 2</span></h4>

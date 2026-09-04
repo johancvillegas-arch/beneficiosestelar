@@ -34,6 +34,7 @@ html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *{animation:none!important;transition:none!important}
+  .hero__video{display:none}
 }
 body{
   margin:0;background:var(--papel);color:var(--grafito);
@@ -107,17 +108,20 @@ section{padding:clamp(4rem,9vw,7.5rem) var(--marco)}
 
 /* ========== HERO ========== */
 .hero{
-  position:relative;min-height:78vh;
+  position:relative;min-height:78vh;overflow:hidden;
   display:flex;flex-direction:column;justify-content:center;
-  background:
-    linear-gradient(180deg,rgba(11,27,46,.72),rgba(11,27,46,.5) 45%,rgba(11,27,46,.85)),
-    var(--noche-mar) center/cover no-repeat;
+  background:var(--noche-mar);
   color:#fff;padding:clamp(5rem,12vw,9rem) var(--marco);
 }
-/* Cuando exista la foto, descomenta esta regla y ajusta el nombre: */
-/* .hero{background-image:
-     linear-gradient(180deg,rgba(11,27,46,.72),rgba(11,27,46,.5) 45%,rgba(11,27,46,.85)),
-     url("../img/hero-beneficios.webp");} */
+.hero__video{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;z-index:0;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;z-index:1;
+  background:linear-gradient(180deg,rgba(11,27,46,.72),rgba(11,27,46,.5) 45%,rgba(11,27,46,.85));
+}
+.hero__contenido{position:relative;z-index:2}
 .hero h1{max-width:15ch;font-variation-settings:"wdth" 88;font-weight:700}
 .hero__sub{max-width:44ch;font-size:1.1rem;color:rgba(255,255,255,.85);margin-top:1.5rem}
 .hero__acciones{display:flex;flex-wrap:wrap;gap:.85rem;margin-top:2.25rem}
