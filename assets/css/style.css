@@ -123,7 +123,7 @@ section{padding:clamp(4rem,9vw,7.5rem) var(--marco)}
 }
 .hero__contenido{position:relative;z-index:2}
 .hero h1{max-width:15ch;font-variation-settings:"wdth" 88;font-weight:700}
-.hero__sub{max-width:44ch;font-size:1.1rem;color:rgba(255,255,255,.85);margin-top:1.5rem}
+.hero__sub{max-width:58ch;font-size:1.03rem;color:rgba(255,255,255,.85);margin-top:1.5rem}
 .hero__acciones{display:flex;flex-wrap:wrap;gap:.85rem;margin-top:2.25rem}
 .hero .horizonte{margin:1.75rem 0;max-width:22rem}
 .hero .seccion__kicker{color:var(--horizonte-suave)}
@@ -310,7 +310,20 @@ section{padding:clamp(4rem,9vw,7.5rem) var(--marco)}
   padding:3.5rem var(--marco);font-size:.88rem;
 }
 .pie a{color:var(--horizonte-suave)}
-.pie__marca{display:block;width:12rem;height:auto;margin-bottom:.75rem}
+.pie__marca{display:block;width:12rem;height:auto;margin-bottom:1.5rem}
+.pie__titulo{
+  font-size:.95rem;font-weight:600;color:#fff;
+  letter-spacing:-.01em;margin-bottom:.9rem;
+}
+.pie__terminos{
+  list-style:none;padding:0;margin:0;
+  display:grid;gap:.5rem;max-width:62ch;font-size:.85rem;
+}
+.pie__terminos li{padding-left:1rem;position:relative;line-height:1.5}
+.pie__terminos li::before{
+  content:"";position:absolute;left:0;top:.6em;
+  width:.3rem;height:.3rem;border-radius:50%;background:var(--horizonte);
+}
 
 /* ========== MARCADOR DE CONTENIDO PENDIENTE ==========
    Todo lo que falte completar va con class="todo".
