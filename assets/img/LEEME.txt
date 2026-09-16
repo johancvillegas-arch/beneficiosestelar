@@ -17,8 +17,8 @@ PLANES (Miraflores) — listo
   plan-miraflores-03.webp     1000 x 625
 
 PLANES (Bellavista) — listo (un solo plan)
-  plan-bellavista-01.webp     1000 x 625
-  plan-bellavista-02.webp ya no se usa (Bellavista quedó con un solo plan,
+  plan-bellavista-02.webp     1000 x 625   Foto del Plan Lovin
+  plan-bellavista-01.webp ya no se usa (Bellavista quedó con un solo plan,
                                no dos). El archivo se puede dejar o borrar,
                                no rompe nada si queda sin usar.
 
