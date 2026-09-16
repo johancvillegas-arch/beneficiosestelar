@@ -341,6 +341,13 @@ section{padding:clamp(4rem,9vw,7.5rem) var(--marco)}
 .legal__datos a{color:rgba(255,255,255,.72);text-decoration:none}
 .legal__datos a:hover{color:var(--horizonte-suave)}
 .legal__razon{font-weight:500;color:rgba(255,255,255,.72)}
+.legal__libro{
+  display:inline-block;margin-top:.5rem;
+  border-radius:8px;overflow:hidden;line-height:0;
+  transition:transform .2s ease;
+}
+.legal__libro:hover{transform:translateY(-2px)}
+.legal__libro img{width:10.5rem;height:auto;display:block}
 .legal__columna{display:flex;flex-direction:column;gap:.7rem;align-items:flex-start}
 .legal__columna a{
   color:rgba(255,255,255,.72);text-decoration:none;line-height:1.4;

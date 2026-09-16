@@ -34,6 +34,11 @@ GALERÍA DE HABITACIONES (sección Alojamiento, hasta 5 fotos c/u)
   habitacion-bellavista-04.webp   800 x 800
   habitacion-bellavista-05.webp   800 x 800
 
+LIBRO DE RECLAMACIONES — listo
+  libro-reclamaciones.png (400x221). Badge oficial de Indecopi, va en
+  el footer enlazado a la página de reclamaciones de Estelar. Es
+  obligatorio por ley que esté visible: no lo quites.
+
 LOGO — listo
   logo-estelar.png (798x365, fondo transparente). Se usa en el nav,
   el banner de beneficios y el footer — los tres sobre fondo azul
