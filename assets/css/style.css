@@ -315,6 +315,10 @@ section{padding:clamp(4rem,9vw,7.5rem) var(--marco)}
   font-size:.95rem;font-weight:600;color:#fff;
   letter-spacing:-.01em;margin-bottom:.9rem;
 }
+.pie__titulo--contacto{margin-top:1.75rem}
+.pie__contacto{margin:0;line-height:1.7}
+.pie__contacto a{color:var(--horizonte-suave);text-decoration:none}
+.pie__contacto a:hover{text-decoration:underline}
 .pie__terminos{
   list-style:none;padding:0;margin:0;
   display:grid;gap:.5rem;max-width:62ch;font-size:.85rem;
