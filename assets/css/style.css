@@ -327,21 +327,30 @@ section{padding:clamp(4rem,9vw,7.5rem) var(--marco)}
 
 /* ---------- Franja legal (lo último de la página) ---------- */
 .legal{
-  margin-top:3rem;padding-top:1.75rem;
+  margin-top:3rem;padding-top:2rem;
   border-top:1px solid rgba(255,255,255,.14);
-  font-size:.8rem;color:rgba(255,255,255,.5);
+  font-size:.82rem;color:rgba(255,255,255,.55);
 }
-.legal__pendiente{margin:0 0 1rem;font-size:.8rem}
-.legal__links{
-  display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;margin-bottom:1.25rem;
+.legal__pendiente{margin:0 0 1.5rem;font-size:.8rem}
+.legal__grid{
+  display:grid;grid-template-columns:1fr;gap:2rem;
 }
-.legal__links a{
-  color:rgba(255,255,255,.72);text-decoration:none;
+@media(min-width:720px){.legal__grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1040px){.legal__grid{grid-template-columns:1.3fr 1fr 1.2fr 1.2fr;gap:2.5rem}}
+.legal__datos p{margin:0 0 .9rem;line-height:1.6;max-width:28ch}
+.legal__datos a{color:rgba(255,255,255,.72);text-decoration:none}
+.legal__datos a:hover{color:var(--horizonte-suave)}
+.legal__razon{font-weight:500;color:rgba(255,255,255,.72)}
+.legal__columna{display:flex;flex-direction:column;gap:.7rem;align-items:flex-start}
+.legal__columna a{
+  color:rgba(255,255,255,.72);text-decoration:none;line-height:1.4;
   border-bottom:1px solid transparent;padding-bottom:.1rem;
 }
-.legal__links a:hover{color:var(--horizonte-suave);border-bottom-color:var(--horizonte)}
-.legal__datos{margin:0 0 .9rem;line-height:1.6}
-.legal__copy{margin:0;color:rgba(255,255,255,.4)}
+.legal__columna a:hover{color:var(--horizonte-suave);border-bottom-color:var(--horizonte)}
+.legal__ley{
+  margin:2.5rem auto 0;max-width:80ch;text-align:center;
+  font-size:.78rem;line-height:1.6;color:rgba(255,255,255,.45);
+}
 
 /* ========== MARCADOR DE CONTENIDO PENDIENTE ==========
    Todo lo que falte completar va con class="todo".
